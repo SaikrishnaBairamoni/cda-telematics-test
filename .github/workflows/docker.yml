@@ -216,7 +216,6 @@ jobs:
           to: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:${{ needs.determine_docker_org_and_tag.outputs.docker_image_tag }}
           ignore-unchanged: true
           only-severities: critical,high
-          organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           keep-previous-comments: true
 
