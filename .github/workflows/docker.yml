@@ -209,7 +209,9 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-carma-vehicle-bridge
-        uses: docker/scout-action@v1
+        # Temporary pin: newer Scout versions hit an org-scoped CVE lookup FORBIDDEN error
+        # for carma_vehicle_nats_bridge, while v1.12.0 succeeds with the same image/org/baseline.
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
