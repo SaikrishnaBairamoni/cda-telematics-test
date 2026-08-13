@@ -101,7 +101,7 @@ jobs:
 
   telematic-carma-cloud-nats-bridge:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.carma_cloud_bridge == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.carma_cloud_bridge == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -133,7 +133,7 @@ jobs:
 
   telematic-kafka-nats-bridge:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.kafka_bridge == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.kafka_bridge == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -165,7 +165,7 @@ jobs:
 
   telematic-carma-vehicle-bridge:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.carma_vehicle_bridge == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.carma_vehicle_bridge == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -200,7 +200,7 @@ jobs:
 
   telematic-historical-data-processing:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.historical_data == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.historical_data == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -232,7 +232,7 @@ jobs:
 
   telematic-grafana:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.grafana == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.grafana == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -264,7 +264,7 @@ jobs:
 
   telematic-cloud-messaging:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.cloud_messaging == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.cloud_messaging == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -296,7 +296,7 @@ jobs:
 
   telematic-rsu-management-service:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.rsu_management == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.rsu_management == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -328,7 +328,7 @@ jobs:
 
   telematic-web-app-client:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.web_client == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.web_client == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -360,7 +360,7 @@ jobs:
 
   telematic-web-app-server:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.web_server == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.web_server == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
