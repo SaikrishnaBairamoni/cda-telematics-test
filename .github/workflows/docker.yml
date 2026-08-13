@@ -185,7 +185,7 @@ jobs:
   telematic-carma-vehicle-bridge:
     needs: [determine_docker_org_and_tag, changes]
     if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.carma_vehicle_bridge == 'true' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-16-cores
 
     steps:
       - name: Checkout
