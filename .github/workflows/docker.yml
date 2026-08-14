@@ -70,7 +70,7 @@ jobs:
 
   telematic-apache:
     needs: [determine_docker_org_and_tag, changes]
-    if: ${{ github.event.pull_request.base.ref == 'master' || needs.changes.outputs.apache == 'true' }}
+    if: ${{ github.event.pull_request.base.ref == 'develop' || needs.changes.outputs.apache == 'true' }}
     runs-on: ubuntu-latest
 
     steps:
