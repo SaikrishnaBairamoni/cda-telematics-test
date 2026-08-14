@@ -95,7 +95,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_apache2:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-apache
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_apache2:pr-${{ github.event.pull_request.number }}
@@ -133,7 +133,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_cloud_nats_bridge:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-carma-cloud-nats-bridge
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_cloud_nats_bridge:pr-${{ github.event.pull_request.number }}
@@ -171,7 +171,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematics-kafka-nats-bridge:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-kafka-nats-bridge
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematics-kafka-nats-bridge:pr-${{ github.event.pull_request.number }}
@@ -209,7 +209,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-carma-vehicle-bridge
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
@@ -247,7 +247,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_historical_data_processing:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-historical-data-processing
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_historical_data_processing:pr-${{ github.event.pull_request.number }}
@@ -285,7 +285,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_grafana:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-grafana
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_grafana:pr-${{ github.event.pull_request.number }}
@@ -323,7 +323,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_cloud_messaging:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-cloud-messaging
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_cloud_messaging:pr-${{ github.event.pull_request.number }}
@@ -361,7 +361,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_rsu_management_service:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-rsu-management-service
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_rsu_management_service:pr-${{ github.event.pull_request.number }}
@@ -399,7 +399,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_client:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-web-app-client
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_client:pr-${{ github.event.pull_request.number }}
@@ -437,7 +437,7 @@ jobs:
           tags: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_server:pr-${{ github.event.pull_request.number }}
 
       - name: Docker Scout Compare telematic-web-app-server
-        uses: docker/scout-action@v1.23.0
+        uses: docker/scout-action@v1.12.0
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_server:pr-${{ github.event.pull_request.number }}
