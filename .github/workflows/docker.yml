@@ -213,11 +213,10 @@ jobs:
         with:
           command: compare
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
-          to: ${{ github.event.pull_request.base.ref == 'master' && 'usdotfhwastol' || (github.event.pull_request.base.ref == 'release/valour' && 'usdotfhwastolcandidate' || 'usdotfhwastoldev') }}/carma_vehicle_nats_bridge:${{ needs.determine_docker_org_and_tag.outputs.docker_image_tag }}
+          to: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:${{ needs.determine_docker_org_and_tag.outputs.docker_image_tag }}
           ignore-unchanged: true
           only-severities: critical,high
-          dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
-          dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
+          organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           keep-previous-comments: true
 
