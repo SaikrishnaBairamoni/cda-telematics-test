@@ -113,6 +113,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_apache2:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-carma-cloud-nats-bridge:
     needs: [determine_docker_org_and_tag, changes]
@@ -159,6 +160,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_cloud_nats_bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-kafka-nats-bridge:
     needs: [determine_docker_org_and_tag, changes]
@@ -205,6 +207,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematics-kafka-nats-bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-carma-vehicle-bridge:
     needs: [determine_docker_org_and_tag, changes]
@@ -251,6 +254,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-historical-data-processing:
     needs: [determine_docker_org_and_tag, changes]
@@ -297,6 +301,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_historical_data_processing:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-grafana:
     needs: [determine_docker_org_and_tag, changes]
@@ -343,6 +348,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_grafana:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-cloud-messaging:
     needs: [determine_docker_org_and_tag, changes]
@@ -389,6 +395,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_cloud_messaging:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-rsu-management-service:
     needs: [determine_docker_org_and_tag, changes]
@@ -435,6 +442,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_rsu_management_service:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-web-app-client:
     needs: [determine_docker_org_and_tag, changes]
@@ -481,6 +489,7 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_client:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
 
   telematic-web-app-server:
     needs: [determine_docker_org_and_tag, changes]
@@ -527,3 +536,4 @@ jobs:
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_server:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          summary: true
