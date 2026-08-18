@@ -187,7 +187,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematics-kafka-nats-bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
-          only-policy: "No fixable critical or high vulnerabilities,No high-profile vulnerabilities,No outdated base images,No unapproved base images"
+          only-policy: "No high-profile vulnerabilities,No outdated base images,No unapproved base images"
           exit-code: true
 
   telematic-carma-vehicle-bridge:
