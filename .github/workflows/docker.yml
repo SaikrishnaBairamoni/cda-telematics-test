@@ -105,6 +105,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_apache2:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-carma-cloud-nats-bridge:
@@ -145,6 +146,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_cloud_nats_bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-kafka-nats-bridge:
@@ -185,6 +187,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematics-kafka-nats-bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-carma-vehicle-bridge:
@@ -225,6 +228,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma_vehicle_nats_bridge:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-historical-data-processing:
@@ -265,6 +269,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_historical_data_processing:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-grafana:
@@ -305,6 +310,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_grafana:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-cloud-messaging:
@@ -345,6 +351,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_cloud_messaging:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-rsu-management-service:
@@ -385,6 +392,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_rsu_management_service:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-web-app-client:
@@ -425,6 +433,7 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_client:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
 
   telematic-web-app-server:
@@ -466,4 +475,5 @@ jobs:
           command: policy
           image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/telematic_web_server:pr-${{ github.event.pull_request.number }}
           organization: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}
+          only-policy: "No outdated base images"
           exit-code: true
